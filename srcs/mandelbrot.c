@@ -6,26 +6,16 @@
 /*   By: luffab <luffab@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 17:01:06 by luffab            #+#    #+#             */
-/*   Updated: 2021/06/01 18:54:49 by luffab           ###   ########lyon.fr   */
+/*   Updated: 2021/06/02 17:20:35 by luffab           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-/*t_mandelbrot	ft_init_mandelbrot_w(t_mandelbrot m)
-{
-	m.x = -1;
-	m.y = -1;
-	m.i = -1;
-	return (m);
-}*/
-
 t_mandelbrot	ft_init_mandelbrot_h(t_fractal *f, t_mandelbrot m)
 {
-	m.r_pixel = (m.x - f->screen_width / 2)
-				/ (0.5 * f->zoom * f->screen_width) + f->movex;
-	m.i_pixel = (m.y - f->screen_height / 2)
-				/ (0.5 * f->zoom * f->screen_height) + f->movey;
+	m.r_pixel = (((m.x + f->x) / f->zoom / f->screen_width * 4 - 2));
+	m.i_pixel = (((m.y + f->y) / f->zoom / f->screen_height * 4 - 2));
 	m.r_new = 0;
 	m.r_old = 0;
 	m.i_new = 0;
@@ -37,7 +27,6 @@ void	ft_mandelbrot_set(t_fractal *f)
 {
 	t_mandelbrot m;
 
-	//m = ft_init_mandelbrot_w(m);
 	m.x = 0;
 	while (m.x < f->screen_width)
 	{

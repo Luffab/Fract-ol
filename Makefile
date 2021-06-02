@@ -4,6 +4,8 @@ SRCS =	srcs/main.c \
 		srcs/mandelbrot.c \
 		srcs/fractol.c \
 		srcs/colors.c \
+		srcs/key_hook.c \
+		srcs/julia.c \
 		
 FLAGS = -Wall -Wextra -Werror -g2
 

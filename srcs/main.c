@@ -6,7 +6,7 @@
 /*   By: luffab <luffab@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 16:02:54 by fatilly           #+#    #+#             */
-/*   Updated: 2021/06/01 18:56:12 by luffab           ###   ########lyon.fr   */
+/*   Updated: 2021/06/02 18:16:16 by luffab           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,15 @@ int	ft_put_errors(int ac, int num)
 void	ft_init_var(t_fractal *f)
 {
 	f->x = 0;
-	f->screen_width = 1680;
-	f->screen_height = 1050;
-	f->zoom = 1;
-	f->movex = -0.5;
-	f->movey = 0;
-	f->iter = 400;
+	f->y = 0;
+	f->screen_width = 500;
+	f->screen_height = 500;
+	f->zoom = 1.1;
+	f->movex = 1;
+	f->movey = 1;
+	f->iter = 100;
+	f->reel = -1.417022285618;
+	f->im = 0.0099534;
 }
 
 int main(int ac, char **av)

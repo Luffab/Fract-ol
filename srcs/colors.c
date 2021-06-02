@@ -6,7 +6,7 @@
 /*   By: luffab <luffab@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 18:01:30 by luffab            #+#    #+#             */
-/*   Updated: 2021/06/01 19:03:43 by luffab           ###   ########lyon.fr   */
+/*   Updated: 2021/06/02 16:59:30 by luffab           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_color(int i, int iter)
 	b = (sin(n * 3.14 * 8 - (3.14 / 2)) + 1) / 2 * 255;
 	return (0x10000 * r + 0x100 * g + b);
 }
+
 
 void	ft_put_pixel(int x, int y, int rgb, t_fractal *f)
 {
